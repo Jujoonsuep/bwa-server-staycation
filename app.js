@@ -12,7 +12,7 @@ const flash = require('connect-flash');
 
 // import mongoose to connect database
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/db_staycation', { 
+mongoose.connect('mongodb+srv://bwamern:bwamern@cluster0.dqooa.mongodb.net/db_staycation?retryWrites=true&w=majority', { 
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
