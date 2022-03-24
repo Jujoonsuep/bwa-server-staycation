@@ -25,6 +25,8 @@ var usersRouter = require('./routes/users');
 const adminRouter = require('./routes/admin');
 const apiRouter = require('./routes/api');
 
+const cors = require('cors');
+
 var app = express();
 
 // view engine setup
@@ -48,6 +50,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/sb-admin-2', express.static(path.join(__dirname, 'node_modules/startbootstrap-sb-admin-2')));
+
+app.use(cors());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
