@@ -121,7 +121,7 @@ module.exports = {
                 bankFrom,
             } = req.body;
 
-            if(!req.body){
+            if(!req.file){
                 return res.status(404).json({message: "Image not Found"})
             }
 
@@ -167,7 +167,7 @@ module.exports = {
                 bookingEndDate,
                 total : total += tax,
                 itemId : {
-                    _id : item.id,
+                    _id : item.id, 
                     title: item.title,
                     price: item.price,
                     duration: duration
